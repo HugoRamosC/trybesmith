@@ -1,6 +1,7 @@
 import express from 'express';
 import productController from './controllers/product.controller';
 import userController from './controllers/user.controller';
+import orderController from './controllers/order.controller';
 
 const app = express();
 
@@ -13,5 +14,6 @@ app.get('/', (req, res) => {
 app.post('/products', productController.createProduct);
 app.get('/products', productController.getAllProducts);
 app.post('/users', userController.createUser);
+app.get('/orders', orderController.getAllOrders);
 
 export default app;

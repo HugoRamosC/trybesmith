@@ -18,3 +18,8 @@ export interface IUserModel {
 export type IUser = Omit <IUserModel, 'id'>;
 
 export type IUserToken = Omit <IUserModel, 'vocation' | 'level' | 'password'>;
+
+export interface IOrderModel {
+  id: number,
+  userId: number,
+}
