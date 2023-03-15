@@ -1,9 +1,9 @@
 import { ResultSetHeader, RowDataPacket } from 'mysql2';
 import query from './sqlQueries';
 import connection from './connection';
-import { IProduct, IProductModel } from '../interfaces';
+import { IProduct, IProductModel } from '../interfaces/interfaces';
 
-const createProduct = async (product: IProduct): Promise<IProductModel> => {
+const createProduct = async (product: IProduct) => {
   const { name, amount, orderId } = product;
   const [{ insertId }] = await connection
     .execute<ResultSetHeader>(query.createProductQuery, [name, amount]);

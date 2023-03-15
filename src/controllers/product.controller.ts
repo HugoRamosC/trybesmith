@@ -2,8 +2,11 @@ import { Request, Response } from 'express';
 import productService from '../services/product.service';
 
 const createProduct = async (req: Request, res: Response) => {
-  const newProduct = await productService.createProduct(req.body);
-  return res.status(201).json(newProduct);
+  const { status, message } = await productService.createProduct(req.body);
+  console.log('productcontroller>>>>>>>', message);
+  
+  if (status) return res.status(status).json({ message });
+  return res.status(201).json(message);
 };
 
 const getAllProducts = async (req: Request, res: Response) => {
