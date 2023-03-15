@@ -7,14 +7,7 @@ const createProduct = async (product: IProduct) => {
   if (validated.error) {
     let status = 400;
     const { message, details } = validated.error;
-    switch (details[0].type) {
-      case 'string.base':
-        status = 422; break;
-      case 'string.min':
-        status = 422; break;
-      default:
-        status = 400; break;
-    }
+    if (/base|min/i.test(details[0].type)) status = 422;
     return { status, message };
   }
   const newProduct = await productModel.createProduct(product);

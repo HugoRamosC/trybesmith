@@ -2,6 +2,7 @@ import express from 'express';
 import productController from './controllers/product.controller';
 import userController from './controllers/user.controller';
 import orderController from './controllers/order.controller';
+import checkTokenLogin from './middlewares/authMiddleware';
 
 const app = express();
 
@@ -16,5 +17,6 @@ app.get('/products', productController.getAllProducts);
 app.post('/users', userController.createUser);
 app.post('/login', userController.login);
 app.get('/orders', orderController.getAllOrders);
+app.post('/orders', checkTokenLogin, orderController.createOrder);
 
 export default app;
