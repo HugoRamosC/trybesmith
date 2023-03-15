@@ -29,10 +29,26 @@ const getByUsernameQuery = `
   WHERE username = ?;
 `;
 
+const createOrderQuery = `
+  INSERT INTO Trybesmith.orders AS O
+  (user_id)
+  VALUES (?);
+`;
+
+const updateProductOrderQuery = `
+  UPDATE Trybesmith.products P
+  INNER JOIN Trybesmith.orders O
+    ON P.order_id = O.id
+  SET P.order_id = MAX(O.id)
+  WHERE P.id = ?;
+`;
+
 export default {
   createProductQuery,
   getAllProductsQuery,
   createUserQuery,
   getAllOrdersQuery,
   getByUsernameQuery,
+  createOrderQuery,
+  updateProductOrderQuery,
 };
