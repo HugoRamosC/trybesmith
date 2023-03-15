@@ -1,4 +1,4 @@
-import { IOrderModel } from '../interfaces';
+import { IOrderModel } from '../interfaces/interfaces';
 import orderModel from '../models/order.model';
 
 const getAllOrders = async (): Promise<IOrderModel[]> => {

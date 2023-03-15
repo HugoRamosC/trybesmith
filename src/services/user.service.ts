@@ -1,4 +1,4 @@
-import { IError, ILogin, IUser } from '../interfaces';
+import { IError, ILogin, IUser } from '../interfaces/interfaces';
 import userModel from '../models/user.model';
 import { generateToken } from '../utils/auth';
 import { validateLogin } from './validation/validations';
