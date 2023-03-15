@@ -14,6 +14,7 @@ app.get('/', (req, res) => {
 app.post('/products', productController.createProduct);
 app.get('/products', productController.getAllProducts);
 app.post('/users', userController.createUser);
+app.post('/login', userController.login);
 app.get('/orders', orderController.getAllOrders);
 
 export default app;

@@ -23,3 +23,14 @@ export interface IOrderModel {
   id: number,
   userId: number,
 }
+
+export interface ILogin {
+  username: string,
+  password: string,
+  user: object,
+}
+
+export interface IError {
+  status: number,
+  message: string,
+}

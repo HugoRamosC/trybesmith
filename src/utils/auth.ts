@@ -14,10 +14,7 @@ export const generateToken = (user: IUserToken): string => {
 };
 
 export const validateToken = (token: string) => {
-  if (!token) {
-    const error = { status: 401, message: 'Token not found' };
-    return error;
-  }
-  const decryptedData = jwt.verify(token, secret);
-  return { decoded: decryptedData };
+  if (!token) return false;
+  const decodedToken = jwt.verify(token, secret);
+  return decodedToken;
 };

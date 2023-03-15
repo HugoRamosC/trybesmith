@@ -24,9 +24,15 @@ const getAllOrdersQuery = `
   ORDER BY O.id;
 `;
 
+const getByUsernameQuery = `
+  SELECT * FROM Trybesmith.users
+  WHERE username = ?;
+`;
+
 export default {
   createProductQuery,
   getAllProductsQuery,
   createUserQuery,
   getAllOrdersQuery,
+  getByUsernameQuery,
 };
