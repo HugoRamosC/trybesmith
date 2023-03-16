@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import { IUserToken } from '../interfaces/interfaces';
+import { IUserToken } from '../interfaces';
 
 const secret: string = process.env.JWT_SECRET || 'secret';
 
@@ -15,6 +15,10 @@ export const generateToken = (user: IUserToken): string => {
 
 export const validateToken = (token: string) => {
   if (!token) return false;
-  const decodedToken = jwt.verify(token, secret);
-  return decodedToken;
+  try {
+    const decodedToken = jwt.verify(token, secret);
+    return decodedToken;
+  } catch (error) {
+    return false;
+  }
 };

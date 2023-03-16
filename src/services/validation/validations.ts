@@ -1,5 +1,5 @@
 import Joi from 'joi';
-import { ILogin, IProduct, IUser } from '../../interfaces/interfaces';
+import { ILogin, IProduct, IUser } from '../../interfaces';
 // import loginSchema from './schemas';
 
 export const validateLogin = (inputLogin: ILogin) => {
@@ -19,6 +19,16 @@ export const validateProduct = (inputLogin: IProduct) => {
   });
 
   return productSchema.validate(inputLogin);
+};
+
+export const validateOrder = (prductsIds: Array<number>) => {
+  const orderSchema = Joi.array().items(Joi.number()).required().messages({
+    'any.required': '"productsIds" is required',
+    'array.base': '"productsIds" must be an array',
+    'number.base': '"productsIds" must include only numbers',
+  });
+  
+  return orderSchema.validate(prductsIds);
 };
 
 export const validateUser = (user: IUser) => {

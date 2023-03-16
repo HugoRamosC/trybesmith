@@ -1,7 +1,7 @@
 import { ResultSetHeader, RowDataPacket } from 'mysql2';
-import query from './sqlQueries';
-import connection from './connection';
-import { IProduct, IProductModel } from '../interfaces/interfaces';
+import query from './SQL/sqlQueries';
+import connection from './connection/connection';
+import { IBodyNewOrder, IProduct, IProductModel } from '../interfaces';
 
 const createProduct = async (product: IProduct) => {
   const { name, amount, orderId } = product;
@@ -16,9 +16,15 @@ const getAllProducts = async (): Promise<IProductModel[]> => {
   return result;
 };
 
+const updateProductsByOrder = async (body: IBodyNewOrder) => {
+  Promise.all(body.productsIds.map((product: number) => connection
+    .execute(query.updateProductOrderQuery, [product])));
+};
+
 const productModel = {
   createProduct,
   getAllProducts,
+  updateProductsByOrder,
 };
 
 export default productModel;

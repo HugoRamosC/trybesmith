@@ -1,7 +1,7 @@
 import { ResultSetHeader, RowDataPacket } from 'mysql2';
-import query from './sqlQueries';
-import connection from './connection';
-import { ILogin, IUser, IUserModel } from '../interfaces/interfaces';
+import query from './SQL/sqlQueries';
+import connection from './connection/connection';
+import { ILogin, IUser, IUserModel } from '../interfaces';
 
 const createUser = async (user: IUser): Promise<IUserModel> => {
   const { username, vocation, level, password } = user;
