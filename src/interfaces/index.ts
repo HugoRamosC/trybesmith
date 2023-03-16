@@ -34,3 +34,11 @@ export interface IError {
   status: number,
   message: string,
 }
+
+export interface IBodyNewOrder {
+  productsIds: number[],
+  user: {
+    id: number,
+    username: string,
+  },
+}
