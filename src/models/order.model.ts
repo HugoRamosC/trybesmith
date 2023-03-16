@@ -1,6 +1,6 @@
 import { RowDataPacket } from 'mysql2';
 import query from './SQL/sqlQueries';
-import connection from './connection/connection';
+import connection from './connection';
 import { IBodyNewOrder, IOrderModel } from '../interfaces';
 
 const getAllOrders = async (): Promise<IOrderModel[]> => {

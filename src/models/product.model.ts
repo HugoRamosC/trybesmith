@@ -1,6 +1,6 @@
 import { ResultSetHeader, RowDataPacket } from 'mysql2';
 import query from './SQL/sqlQueries';
-import connection from './connection/connection';
+import connection from './connection';
 import { IBodyNewOrder, IProduct, IProductModel } from '../interfaces';
 
 const createProduct = async (product: IProduct) => {
