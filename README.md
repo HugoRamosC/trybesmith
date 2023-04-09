@@ -6,13 +6,13 @@
 
 Todas as camadas da aplicação (Models, Service e Controllers) e, por meio desta, é possível realizar as operações básicas que se pode fazer em um determinado banco de dados: Criação, Leitura, Atualização e Exclusão (CRUD).
 
-### Alguns conteúdos utilizados:
+## Alguns conteúdos utilizados:
 
 - Introdução ao TypeScript
 - Tipagem estática e generics
 - Express com TypeScript
 
-## Foi trabalhado no projeto:
+### Foi trabalhado no projeto:
 
 - Tipagem na definição de variáveis e parâmetros.
 - Definir interfaces/types.
