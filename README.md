@@ -12,12 +12,11 @@ Todas as camadas da aplicação (Models, Service e Controllers) e, por meio dest
 - Tipagem estática e generics
 - Express com TypeScript
 
-## O foi trabalhado no projeto:
+## Foi trabalhado no projeto:
 
 - Tipagem na definição de variáveis e parâmetros.
 - Definir interfaces/types.
-- Tipagem para definir o retorno das funções
-- Generics para trabalhar com funções genéricas.
+- Tipagem para definir o retorno das funções.
 - Como aplicar TypeScript em uma aplicação MSC com Express e MySQL2.
 
 ## Requisitos obrigatórios do projeto
