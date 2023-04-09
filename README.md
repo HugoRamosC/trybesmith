@@ -1,13 +1,35 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+# Projeto TrybeSmith
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+[MEUS COMMITS](https://github.com/HugoRamosC/trybesmith/commits)
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+## O que foi desenvolvido:
+
+Todas as camadas da aplicação (Models, Service e Controllers) e, por meio desta, é possível realizar as operações básicas que se pode fazer em um determinado banco de dados: Criação, Leitura, Atualização e Exclusão (CRUD).
+
+### Alguns conteúdos utilizados:
+
+- Introdução ao TypeScript
+- Tipagem estática e generics
+- Express com TypeScript
+
+## O foi trabalhado no projeto:
+
+- Tipagem na definição de variáveis e parâmetros.
+- Definir interfaces/types.
+- Tipagem para definir o retorno das funções
+- Generics para trabalhar com funções genéricas.
+- Como aplicar TypeScript em uma aplicação MSC com Express e MySQL2.
+
+## Requisitos obrigatórios do projeto
+
+- [x] 1. Crie um endpoint para o cadastro de produtos
+- [x] 2. Crie um endpoint para a listagem de produtos
+- [x] 3. Crie um endpoint para o cadastro de pessoas usuárias
+- [x] 4. Crie um endpoint para listar todos os pedidos
+- [x] 5. Crie um endpoint para o login de pessoas usuárias
+
+## Requisitos bônus
+
+- [x] 6. Crie as validações dos produtos
+- [x] 7. Crie as validações para as pessoas usuárias
+- [x] 8. Crie um endpoint para o cadastro de um pedido
